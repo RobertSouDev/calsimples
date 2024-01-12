@@ -51,14 +51,16 @@ body {
     
 }
 
-.teste {
-    margin-left: 12px;
-    margin-top: 10px;
-}
+
 
 .leftSide>div:first-child {
-    align-self: flex-start;
-    color: var(--primaryColor);
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.title {
+    color: var(--primaryColor) ;
     font-size: 20px;
     font-weight: 500;
 }
@@ -93,4 +95,10 @@ input::placeholder {
     color: var(--textColor);
     font-size: 6rem;
     font-weight: 700;
+}
+
+i {
+    color: var(--textColor);
+    font-size: 1.2rem;
+    cursor: pointer;
 }
