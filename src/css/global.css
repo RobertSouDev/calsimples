@@ -4,12 +4,15 @@
     --bgColor: #fff;
     --primaryColor: #fecc02;
     --placeholderColor: rgba(0,0,0, 0.05);
+    --textColor: #000;
 }
 
 .dark {
     --bgColor: #121212;
     --primaryColor: #fecc02;
     --placeholderColor: rgba(255, 255, 255, 0.05);
+    --textColor: #fff;
+
 }
 
 * {
@@ -44,7 +47,13 @@ body {
 
 .leftSide {
     background-color: var(--bgColor);
-    border-radius: 0 2rem 2rem 0;
+    border-radius: 2rem 0 0 2rem;
+    
+}
+
+.teste {
+    margin-left: 12px;
+    margin-top: 10px;
 }
 
 .leftSide>div:first-child {
@@ -52,6 +61,10 @@ body {
     color: var(--primaryColor);
     font-size: 20px;
     font-weight: 500;
+}
+
+.leftSide>div:last-child {
+    color: var(--textColor);
 }
 
 .rightSide {
@@ -65,6 +78,7 @@ input {
     font-size: 6rem;
     font-weight: 700 ;
     max-width: 30vw;
+    background-color: transparent;
 }
 
 input:focus {
@@ -73,4 +87,10 @@ input:focus {
 
 input::placeholder {
     color: var(--placeholderColor);
+}
+
+.resultText {
+    color: var(--textColor);
+    font-size: 6rem;
+    font-weight: 700;
 }
