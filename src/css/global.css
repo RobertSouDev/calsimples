@@ -3,17 +3,20 @@
 .light {
     --bgColor: #fff;
     --primaryColor: #fecc02;
+    --placeholderColor: rgba(0,0,0, 0.05);
 }
 
 .dark {
     --bgColor: #121212;
     --primaryColor: #fecc02;
+    --placeholderColor: rgba(255, 255, 255, 0.05);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -35,12 +38,39 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .leftSide {
     background-color: var(--bgColor);
+    border-radius: 0 2rem 2rem 0;
+}
+
+.leftSide>div:first-child {
+    align-self: flex-start;
+    color: var(--primaryColor);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .rightSide {
-    background-color: var(--primaryColor)
+    background-color: var(--primaryColor);
+    border-radius: 0 2rem 2rem 0;
+}
+
+input {
+    border: none;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700 ;
+    max-width: 30vw;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--placeholderColor);
 }
