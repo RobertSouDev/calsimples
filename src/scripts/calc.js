@@ -9,11 +9,12 @@ document.addEventListener("keydown", function(event) {
 
         const historicItem = {
             calc: input.value,
-            result: resultCalc,
+            result: resultCalc
         }
 
-        const previousValues = JSON.parse(window.localStorage.getItem("historic"))
+        const previousValues = JSON.parse(window.localStorage.getItem("historic")) || []
 
+        
         previousValues.push(historicItem)
 
         window.localStorage.setItem("historic", JSON.stringify(previousValues))
